@@ -1,0 +1,281 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    z-index:100;
+    backdrop-filter:blur(15px);
+}
+
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:35px;
+    opacity:.8;
+    transition:.3s;
+}
+
+
+nav a:hover{
+    opacity:1;
+}
+
+
+
+.hero{
+
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:120px 8% 50px;
+
+}
+
+
+.hero-text{
+
+    width:50%;
+    animation:slideIn 1.2s ease;
+
+}
+
+
+
+.hero h1{
+
+    font-size:75px;
+    line-height:1.05;
+
+}
+
+
+.hero p{
+
+    font-size:20px;
+    margin:30px 0;
+    color:#ccc;
+
+}
+
+
+
+button{
+
+    background:white;
+    color:black;
+    border:none;
+    padding:18px 40px;
+    border-radius:40px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.4s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+.model{
+
+    width:45%;
+    height:600px;
+
+}
+
+
+
+model-viewer{
+
+    width:100%;
+    height:100%;
+
+}
+
+
+
+
+.collection{
+
+    padding:100px 8%;
+    text-align:center;
+
+}
+
+
+
+.collection h2,
+.why h2{
+
+    font-size:45px;
+    margin-bottom:60px;
+
+}
+
+
+
+.cards{
+
+    display:flex;
+    gap:30px;
+    justify-content:center;
+
+}
+
+
+
+.card{
+
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    padding:40px;
+    border-radius:30px;
+    width:300px;
+    backdrop-filter:blur(20px);
+    transition:.5s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-15px) scale(1.03);
+
+}
+
+
+
+
+.why{
+
+    padding:100px 8%;
+    text-align:center;
+
+}
+
+
+
+.features{
+
+    display:flex;
+    justify-content:center;
+    gap:50px;
+
+}
+
+
+
+.features div{
+
+    padding:35px;
+    background:#111;
+    border-radius:25px;
+
+}
+
+
+
+footer{
+
+    text-align:center;
+    padding:80px;
+    background:#000;
+
+}
+
+
+
+@keyframes slideIn{
+
+from{
+
+opacity:0;
+transform:translateX(-80px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateX(0);
+
+}
+
+}
+
+
+
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+
+}
+
+
+.hero-text{
+
+width:100%;
+
+}
+
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+
+.model{
+
+width:100%;
+height:400px;
+
+}
+
+
+.cards,
+.features{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+
+}
